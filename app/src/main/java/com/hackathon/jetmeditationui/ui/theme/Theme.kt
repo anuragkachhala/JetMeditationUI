@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -15,18 +16,20 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
 
+/*
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = DeepBlue,
+    secondary = ButtonBlue,
+    tertiary = DarkerButtonBlue
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
+    primary = BlueViolet3,
     secondary = PurpleGrey40,
     tertiary = Pink40
 
-    /* Other default colors to override
+    */
+/* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
     onPrimary = Color.White,
@@ -34,7 +37,8 @@ private val LightColorScheme = lightColorScheme(
     onTertiary = Color.White,
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
-    */
+    *//*
+
 )
 
 @Composable
@@ -62,7 +66,16 @@ fun JetMeditationUITheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = Typoraphy,
+        content = content
+    )
+}*/
+
+@Composable
+fun JetMeditationUITheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+    MaterialTheme(
+        typography = Typoraphy,
         content = content
     )
 }
+
